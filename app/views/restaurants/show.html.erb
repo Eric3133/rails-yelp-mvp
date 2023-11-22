@@ -1,0 +1,15 @@
+<h1>this is one restaurant</h1>
+<h2>Name:  <%= @restaurant.name %></h2>
+<h3>Address:  <%= @restaurant.address %></h3>
+<h4>Phone number:  <%= @restaurant.phone_number %></h4>
+<h4>Category:  <%= @restaurant.category %></h4>
+
+<%= link_to "back to all restaurant", restaurants_path %>
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+<br>
